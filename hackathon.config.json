@@ -1,0 +1,18 @@
+{
+  "projectName": "lablens",
+  "teamName": "commit happens!",
+  "tagline": "turning confusing lab reports into a clear,personalised care plan",
+  "teamMembers": [
+    "samyak",
+    "naman",
+    "abhav",
+    "aryan"
+  ],
+  "problemStatement": "9 in 10 indian adults cannot fully understand their own medical lab reports. patients get a page of jargon and numbers with no explanation of what it means or what to do next-leading to anxiety, ignored red flags, and no follow through on diet, exercise, or lifestyle change.",
+  "frontend": "React (Vite)",
+  "backend": "Express",
+  "database": "PostgreSQL",
+  "authentication": "Session-based",
+  "addons": [],
+  "installDeps": true
+}
