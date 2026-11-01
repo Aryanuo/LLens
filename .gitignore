@@ -34,3 +34,8 @@ Thumbs.db
 *.njsproj
 *.sln
 *.sw?
+
+project.md
+change.md 
+package-lock.json
+.env.example

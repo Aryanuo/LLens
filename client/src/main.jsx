@@ -1,22 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import './styles/style.css';
 
-function App() {
-  return (
-    <main className="starter-card">
-      <h1>lablens</h1>
-      <p className="tagline">turning confusing lab reports into a clear,personalised care plan</p>
-      <div className="guidelines-box">
-        <strong>Team:</strong> commit happens!<br />
-        <strong>Problem Statement:</strong> 9 in 10 indian adults cannot fully understand their own medical lab reports. patients get a page of jargon and numbers with no explanation of what it means or what to do next-leading to anxiety, ignored red flags, and no follow through on diet, exercise, or lifestyle change.
-      </div>
-    </main>
-  );
-}
+import LandingPage from './pages/LandingPage';
+import DashboardPage from './pages/DashboardPage';
+import UploadPage from './pages/UploadPage';
+import AnalysisPage from './pages/AnalysisPage';
+import HistoryPage from './pages/HistoryPage';
 
 ReactDOM.createRoot(document.getElementById('app')).render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
+        <Route path="/upload" element={<UploadPage />} />
+        <Route path="/analysis/:id" element={<AnalysisPage />} />
+        <Route path="/history" element={<HistoryPage />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
